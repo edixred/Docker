@@ -11,8 +11,7 @@ services:
     volumes:
       - ~/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/local/bin/docker:/usr/local/bin/docker
-services:
+      - /usr/local/bin/docker:/usr/local/bin/docke
   portainer:
     image: portainer/portainer-ce:latest
     container_name: portainer
@@ -25,8 +24,6 @@ services:
       - ./portainer-data:/data
     ports:
       - 9000:9000
-
-services:
   sonarqube:
     image: sonarqube:8.2-community
     depends_on:
