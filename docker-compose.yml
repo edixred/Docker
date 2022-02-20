@@ -65,7 +65,6 @@ volumes:
   postgresql:
   postgresql_data:
 
-services:
   nexus:
     image: sonatype/nexus
     volumes:
