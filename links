@@ -1,11 +1,10 @@
-http://450f-200-116-194-138.ngrok.io/login?from=%2F
+#####Jenkins
+http://6200-200-116-194-138.ngrok.io/login?from=%2F
 user: admin
 pass AdminSemilero
 
-
-http://2661-45-225-226-137.ngrok.io/projects
+#####Sonar
+http://bc04-45-225-226-137.ngrok.io 
 usr: admin
 pass: admin
 
-Sonar
-http://bc04-45-225-226-137.ngrok.io 
