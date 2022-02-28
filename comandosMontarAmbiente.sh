@@ -1,4 +1,4 @@
-#desplegar imagen Docker
+#SCRIPT PARA DESPLEGAR AMBIENTE SONARQUBE MEDIANTE EL USO DE IMAGENES DOCKER
 docker-compose -f Docker/Jenkins.yml up -d
 # obtener contraseña
 echo ______________Jenkins Listo______________
@@ -12,4 +12,7 @@ tar -xvf bkjenkins2.tar
 docker restart jenkins
 sleep 20
 echo ______________ Reinicio Terminado ______________
-
+echo ______________ Iniciando SonarQube p:9100 ______________
+docker-compose -f Docker/SonarQube.yml up -d
+sleep 20
+echo ______________ SonarQube Iniciado______________
