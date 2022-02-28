@@ -6,6 +6,7 @@ docker logs jenkins
 echo ______________COPEANDO BACKUP______________
 cp Docker/AllBackup jenkins/
 echo ______________DESCARGANDO BACKUP PLUGINS______________
+chmod 400 Docker/demokey
 scp -i Docker/demokey ubuntu@ec2-34-205-146-122.compute-1.amazonaws.com:/home/ubuntu/bkjenkins.tar .
 tar -xvf bkjenkins.tar
 docker restart jenkins
