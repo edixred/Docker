@@ -2,7 +2,7 @@
 docker-compose -f Docker/Jenkins.yml up -d
 docker-compose -f Docker/Nexus.yml up -d
 docker-compose -f Docker/Nginx.yml up -d
-docker-compose -f Docker/Portaines.yml up -d
+docker-compose -f Docker/Portainer.yml up -d
 docker-compose -f Docker/SonarQube.yml up -d
 docker-compose -f Docker/Tomcat.yml up -d
 # obtener contraseña
