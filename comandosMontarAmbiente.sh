@@ -11,3 +11,5 @@ echo ______________Jenkins Listo______________
 #scp -i Docker/demokey ubuntu@ec2-34-205-146-122.compute-1.amazonaws.com:/home/ubuntu/bkjenkins.tar .
 #tar -xvf bkjenkins.tar
 
+
+docker logs -f tomcat9
