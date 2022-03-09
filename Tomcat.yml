@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  ema_db: 
+    container_name: mysql
+    environment: 
+      MYSQL_DATABASE: ema2
+      MYSQL_PASSWORD: ema123
+      MYSQL_ROOT_PASSWORD: emadb123
+      MYSQL_USER: ema
+    image: "mysql:5.7"
+    ports: 
+      - "3306:3306"
+    volumes: 
+      - "$PWD../data:/var/lib/mysql"
+      - "$PWD../ema/bd:/bk_ema2_ed_16032020.sql"
+  ema_acces: 
+    container_name: acces
+    depends_on: 
+      - ema_registro
+      - ema_data
+      - ema_security
+    environment: 
+      - SPRING_PROFILES_ACTIVE=develop
+    image: "tomcat:9.0.31-jdk8-openjdk"
+    ports: 
+      - "8082:8080"
+    volumes: 
+      - "$PWD../ema/acces:/usr/local/tomcat/webapps"
+      - "$PWD../logs/log_acces:/usr/local/tomcat/logs"
+#docker-compose -f docker-compose.yml up -d
