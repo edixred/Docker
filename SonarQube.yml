@@ -40,3 +40,4 @@ volumes:
   postgresql:
   postgresql_data:
 #docker-compose -f docker-compose.yml up -d
+# sudo docker run -d --name sonarqube -p 9000:9000 sonarqube:9.5-community
